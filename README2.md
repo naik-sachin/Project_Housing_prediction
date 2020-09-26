@@ -1,19 +1,19 @@
 
 # King County's Housing Market
 
-With the ongoing pandemic of COVID-19, interest rates for mortgages have dropped opening up more oppotunities, financially, for people to buy homes.  According to [Forbes](https://www.forbes.com/sites/forbesrealestatecouncil/2020/09/21/a-newfound-reality-buyers-currently-outnumber-sellers-in-housing-market/#7065905d339d), "buyers are currently outnumbering sellers [and] with so much demand and a low inventory, [seller]s are bound to make a quick sale and a higher profit."  Now is the time to act quickly to make profits in real estate, and if you're looking into the housing market in King County, WA, save time and maximize profits by searching armed with the information provided below.
+With the ongoing pandemic of COVID-19, interest rates for mortgages have dropped which opens up many financial opportunities for people to buy homes.  According to [Forbes](https://www.forbes.com/sites/forbesrealestatecouncil/2020/09/21/a-newfound-reality-buyers-currently-outnumber-sellers-in-housing-market/#7065905d339d), "buyers are currently outnumbering sellers [and] with so much demand and a low inventory, [seller]s are bound to make a quick sale and a higher profit."  Now is the time to act quickly to make profits in real estate, and if you're looking into the housing market in King County, WA, save time and maximize profits by searching armed with the information provided below.
 
 
 ## The Data
 
-There are many characteristics of a home that affect its overall saleprice, but these characteristics individual to the home might not hold the same weights in different circumstances as seen in this chart of the data collected for the housing prices in King County below.
+There are many factors that can affect a home's overall saleprice: from the individual characteristics of the property to the surrounding community in which the property is located.  But there is no single factor that can predict the sales price of a home; rather, it is the combination of the factors.  Some factors also hold the same weight as other factors.  The data represented in the heatmap below represents all the data gathered for King County's housing data from 2014-2015.
 
 ![hpheatmapall](images/all_data.png)
 
 
 ## What affects the sale price?
 
-Out of the many factors that play into pricing a home, nothing stands out better than the natural tiers of housing price brackets that occur given a certain location.  These factors will be explored through the analysis of the followinf characteristics:  
+Out of the many factors that play into pricing a home in King County, the natural tiers and distinct patterns of price brackets that are created by the location of the houses seems to be the largest contributing factor to the price of a house.  The following factors will be explored through the analysis of the following characteristics in relation to the location of the house:  
 
 * Price per Square-Foot
 * Distances to Points of Interest
@@ -22,50 +22,45 @@ Out of the many factors that play into pricing a home, nothing stands out better
 
 ### Square Footage and House Price
 
-Houses with larger living square footages should have a higher value. However, when considering other factors (especially location) square footage alone can't illustrate a concrete trend in housing prices.  In order to visualize the trends, square footage of homes will be viewed locationally which can then be juxtaposed with the price per square footage of homes locationally to observe any relationships within the data.
+Properties with larger square footages tend to hold a higher value.  However, when considering other factors (especially location) square footage alone can't illustrate a concrete trend in housing prices.  In order to visualize the trends, square footage of homes will be observed on the basis of longitude and latitude juxtaposed with its prices to obtain a better understanding of the relationship of square footage and house price.
 
 #### Square Foot Map
->![hpsqft](images/sqft.png)
->* The plot above displays a trend where the concentrations of houses with lower living spaces towards the west of King County. 
+![hpsqft](images/sqft.png)
+> The plot above displays a trend where the concentrations of houses with lower square footage towards the west of King County. 
     
 #### Price Per Square Foot Map
->![hppricesqft](images/price_per_sqft.png)
-
->* Note how the price per squarefoot has a general trend of being the higher in the northern half of King County.
+![hppricesqft](images/price_per_sqft.png)
+> Note how the price per squarefoot has a general trend of being the higher in the northern half of King County.
 
 
 ### How does proximity to different points of interest  in King County affect housing prices? 
 
-In order to see how proximity to a point of interest affects housing prices we'll look at the average housing price within a certain interval. We'll use 5 mile intervals starting at 0 miles and ending at 30 miles. By looking at the average housing price in each interval we should see a trend similar to what was shown in the scatter plots above.
+In order to see how proximity to a point of interest affects housing prices, the average housing price within a certain interval will be observed: using 5 mile intervals starting at 0 miles and ending at 30 miles. By looking at the average housing price in each interval, trends will be better displayed.
 
 #### Organization/Code Cleanliness
->![hptransportation](images/house_price_vs_transportation.png)
+![hptransportation](images/house_price_vs_transportation.png)
+> asdf
 
->* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.
+#### Organization/Code Cleanliness
+![hpentertainment](images/house_price_vs_entertainment.png)
+> The
 
->![hpentertainment](images/house_price_vs_entertainment.png)
->* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.
+#### Organization/Code Cleanliness
+![hpgreenspace](images/house_price_vs_greenspace.png)
+> asdf
 
->![hpgreenspace](images/house_price_vs_greenspace.png)
->* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.
-    
-#### Overall points of Interest
-asfd
-
->![](images/pt_of_interest_map.png)
-
->* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.
 
 ### Population Density
 
->![](images/pt_of_interest_map.png)
+asdf
 
->* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.
+#### Overall points of Interest
+![](images/pt_of_interest_map.png)
+>asdf
+
+#### Organization/Code Cleanliness
+![](images/pt_of_interest_map.png)
+> asdf
 
 
 ## More Data
