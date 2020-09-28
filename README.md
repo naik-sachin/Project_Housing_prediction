@@ -85,9 +85,20 @@ After running through cycles of fitting models and condensing data according to 
 The final assumption that we will check will be for homoscedasticity. The Breusch-Pagan and the White test results in p-values that are nearly zero. This implies that the data is in fact heteroscedastic and the data does not meet the necessary assumptions to be a linear model.
 
 ![hpregressionplots](images/regression_plots.png)
+![hpregressionplots](images/regression_plots2.png)
+![hpregressionplots](images/regression_plots3.png)
+![hpregressionplots](images/regression_plots4.png)
+![hpregressionplots](images/regression_plots5.png)
+![hpregressionplots](images/regression_plots6.png)
+![hpregressionplots](images/regression_plots7.png)
+![hpregressionplots](images/regression_plots8.png)
+![hpregressionplots](images/regression_plots9.png)
 >All of the variables with the exception of dist_to_seattle_center seem to be fairly homoscedastic. The variance in the residuals of dist_to_seattle_center isn't consistent so a linear regression model will not be the most reliable for this dataset.
 
 It may be the case that the data is better modeled with a polynomial regression rather than linear.  And after fitting a range of polynomial regressions, the meansqured error of the cross validation score show that the data is best modeled by a second degree polynomial.
+
+![hpregressionplots](images/actual_vs_predicted_dollars.png)
+>Above is the actual versus predicted price for each house based upon the model fitted by a 2nd degree polynomial.
 
  
 ## Conclusion
