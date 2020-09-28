@@ -67,21 +67,38 @@ Parts of an area can be characterized from metropolitan to rural via population 
 > The plot above displays (even without outliers) that the price of the average home increases as the density of the population surrounding the area increases.  When noting the deviations of each individual column, it also generally increases as the population density increases.
 
 
-## More Data
+## Predicting the Sale Price (Features)
+
+To create a model for predicting the sales price, the original set of variables of the data (shown in the heatmap above) was filtered to narrow down the best predicting variables to use to model the data.  First the data was processed to reduce colinearity and multicolinearity via filtration (set by pearson correlation coefficients and VIF scores), creation of interactions and categorical data, diffusion of unbalanced weights created by a small number of categorical features, and removal of outliers determined by standard deviations.  Thus the resulting features of the predictors are narrowed down to the variables displayed below.
 
 ![hpfiltered](images/filtered_variables.png)
-> asdf
+> The heatmap above displays the resulting features that will be used to model housing price data.
 
 
-## Modelling the Data
+## Predicting the Sale Price (Model)
+
+After running through cycles of fitting models and condensing data according to the stats describing the goodness of fit, the final model was analyzed via the qqplot below.
 
 ![hpqqplots](images/qqplot.png)
->asdf
+>The residuals for the model seem to be normally distributed, although the tails of the qqplot imply that there are some more outliers that could be eliminated in order to improve the accuracy of the model.
+
+The final assumption that we will check will be for homoscedasticity. The Breusch-Pagan and the White test results in p-values that are nearly zero. This implies that the data is in fact heteroscedastic and the data does not meet the necessary assumptions to be a linear model.
 
 ![hpregressionplots](images/regression_plots.png)
->asdf
+>All of the variables with the exception of dist_to_seattle_center seem to be fairly homoscedastic. The variance in the residuals of dist_to_seattle_center isn't consistent so a linear regression model will not be the most reliable for this dataset.
+
+It may be the case that the data is better modeled with a polynomial regression rather than linear.  And after fitting a range of polynomial regressions, the meansqured error of the cross validation score show that the data is best modeled by a second degree polynomial.
 
  
 ## Conclusion
 
-In King County, the locations of where you invest in real estate will greatly impact your profits.  If resources allow for large scale or even commericial investments, the areas closest to the metropolitan areas (North-west King County) are where you should invest your money.  If working with smaller resources or larger volumes of properties, invest in houses located in areas that are further away in the suburbs of King County.
+**Recommendations**:
+
+1. In terms of price per square foot, those with higher budgets should looks towards the northern and western parts of King County for either purchasing or investing. For those with lower budgets or those just entering the housing market, the soutern part of King County is typically more affordable.
+
+2. When considering local attractions or transportation, choose a property within a 5 mile radius from Seattle Center/Kerry Park or Discovery Park.  These homes have the highest average price for home within 5 miles.  The Link System serves parts of King County with both higher and lower priced homes, however homes within 20 miles of a Link Station tend to have higher values. It should be noted that the Link System only serves the western part of King County so that does impose a restrictions withn buyer interests.
+
+3. When taking into account population density, buyers will have a greater availability of houses if target housing search is in a area with a population density of less than 6400 people per square mile. We suggest starting your housing search in these area due to the high abundance of properties sold. If you have a higher budget or plan on flipping a house, you may want to look at investing in an area where there is a higher population density as those properties tend to sell for a higher price.
+
+**Model Performance**:
+Due to outliers having a less than normal distribution as well as both the White and Breusch-Pagan Test indicating a heteroscedastic model, a polynomial regression of degree 2 was the best fit for the data.  As a second degree polynomial, the model is approximately 67% accurate with a mean squared error of 0.014.
